@@ -1,4 +1,12 @@
 UselessQuest::Application.routes.draw do
+
+  resources :quests
+
+  get 'index' => 'quests#index'
+  root 'quests#index'
+  get '/about' => 'quests#about'
+  post 'index' => 'quests#update'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
